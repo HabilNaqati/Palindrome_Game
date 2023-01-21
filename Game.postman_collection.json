@@ -1,0 +1,812 @@
+{
+	"info": {
+		"_postman_id": "c0fb5c73-b53d-4e5e-b8d0-994e96e2d60a",
+		"name": "Game",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZXhwIjoxNjc0MzMwMzI1LCJpYXQiOjE2NzQzMjg1MjUsInVzZXJSb2xlSWQiOjEsInVzZXJBY3RpdmUiOiIxIn0.T9zrvRd1N02yL0CoLz5aPPT33pvYlPYcjOdpCXQCyZA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}user/",
+							"host": [
+								"{{url}}user"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Output",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}user/",
+									"host": [
+										"{{url}}user"
+									],
+									"path": [
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 21 Jan 2023 19:15:59 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.1"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, PUT, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"output\": {\n        \"userId\": 3,\n        \"userName\": \"test user\",\n        \"userUpass\": \"12345\",\n        \"userAddress\": \"test address\",\n        \"userMobile\": \"+91-9098989898\",\n        \"userEmail\": \"test@icloud.com\",\n        \"userRoleId\": 1,\n        \"userActive\": \"1\",\n        \"userEntryId\": 0,\n        \"userEntryDate\": \"2023-01-22\",\n        \"userModifiedId\": 0,\n        \"userModifiedDate\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"test user\",\r\n    \"userUpass\": \"12345\",\r\n    \"userAddress\": \"test address\",\r\n    \"userMobile\": \"+91-9098989898\",\r\n    \"userEmail\": \"test@icloud.com\",\r\n    \"userRoleId\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}user/",
+							"host": [
+								"{{url}}user"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Output",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userName\": \"test user\",\r\n    \"userUpass\": \"12345\",\r\n    \"userAddress\": \"test address\",\r\n    \"userMobile\": \"+91-9098989898\",\r\n    \"userEmail\": \"test@icloud.com\",\r\n    \"userRoleId\": \"1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}user/",
+									"host": [
+										"{{url}}user"
+									],
+									"path": [
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 21 Jan 2023 19:14:26 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.1"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, PUT, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"output\": {\n        \"userId\": 3,\n        \"userName\": \"test user\",\n        \"userUpass\": \"12345\",\n        \"userAddress\": \"test address\",\n        \"userMobile\": \"+91-9098989898\",\n        \"userEmail\": \"test@icloud.com\",\n        \"userRoleId\": 1,\n        \"userActive\": \"1\",\n        \"userEntryId\": 0,\n        \"userEntryDate\": \"2023-01-22\",\n        \"userModifiedId\": 0,\n        \"userModifiedDate\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update User Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZXhwIjoxNjc0MzMwMzI1LCJpYXQiOjE2NzQzMjg1MjUsInVzZXJSb2xlSWQiOjEsInVzZXJBY3RpdmUiOiIxIn0.T9zrvRd1N02yL0CoLz5aPPT33pvYlPYcjOdpCXQCyZA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"test user update\",\r\n    \"userUpass\": \"12345\",\r\n    \"userAddress\": \"test address update\",\r\n    \"userMobile\": \"+91-9898787876\",\r\n    \"userEmail\": \"test@gmail.com\",\r\n    \"userRoleId\": \"1\",\r\n    \"userActive\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}user/",
+							"host": [
+								"{{url}}user"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Output",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userName\": \"test user update\",\r\n    \"userUpass\": \"12345\",\r\n    \"userAddress\": \"test address update\",\r\n    \"userMobile\": \"+91-9898787876\",\r\n    \"userEmail\": \"test@gmail.com\",\r\n    \"userRoleId\": \"1\",\r\n    \"userActive\": \"1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}user/",
+									"host": [
+										"{{url}}user"
+									],
+									"path": [
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 21 Jan 2023 19:17:06 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.1"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, PUT, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"output\": {\n        \"userId\": 3,\n        \"userName\": \"test user update\",\n        \"userUpass\": \"12345\",\n        \"userAddress\": \"test address update\",\n        \"userMobile\": \"+91-9898787876\",\n        \"userEmail\": \"test@gmail.com\",\n        \"userRoleId\": 1,\n        \"userActive\": \"1\",\n        \"userEntryId\": 3,\n        \"userEntryDate\": \"2023-01-22\",\n        \"userModifiedId\": 3,\n        \"userModifiedDate\": \"2023-01-22\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete User by ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZXhwIjoxNjc0MzMwMzI1LCJpYXQiOjE2NzQzMjg1MjUsInVzZXJSb2xlSWQiOjEsInVzZXJBY3RpdmUiOiIxIn0.T9zrvRd1N02yL0CoLz5aPPT33pvYlPYcjOdpCXQCyZA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}user/",
+							"host": [
+								"{{url}}user"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Output",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}user/",
+									"host": [
+										"{{url}}user"
+									],
+									"path": [
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 21 Jan 2023 19:17:45 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.1"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, PUT, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User Deleted Successfully\"\n}"
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZXhwIjoxNjc0MzE2NjgzLCJpYXQiOjE2NzQzMTMwODMsInVzZXJSb2xlSWQiOiIxIiwidXNlckFjdGl2ZSI6IjEifQ.41bAV88itP6VmBLqjM8FFCPx26WyDishL8xkyqitUpU",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"test@icloud.com\",\r\n    \"password\":\"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}login/",
+							"host": [
+								"{{url}}login"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Output",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\":\"test@icloud.com\",\r\n    \"password\":\"12345\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}login/",
+									"host": [
+										"{{url}}login"
+									],
+									"path": [
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 21 Jan 2023 19:15:25 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.1"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZXhwIjoxNjc0MzMwMzI1LCJpYXQiOjE2NzQzMjg1MjUsInVzZXJSb2xlSWQiOjEsInVzZXJBY3RpdmUiOiIxIn0.T9zrvRd1N02yL0CoLz5aPPT33pvYlPYcjOdpCXQCyZA; HttpOnly; Path=/"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZXhwIjoxNjc0MzMwMzI1LCJpYXQiOjE2NzQzMjg1MjUsInVzZXJSb2xlSWQiOjEsInVzZXJBY3RpdmUiOiIxIn0.T9zrvRd1N02yL0CoLz5aPPT33pvYlPYcjOdpCXQCyZA\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Play Game",
+			"item": [
+				{
+					"name": "Start Game",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZXhwIjoxNjc0MzI5OTExLCJpYXQiOjE2NzQzMjgxMTEsInVzZXJSb2xlSWQiOjEsInVzZXJBY3RpdmUiOiIxIn0.Czqvl13iglcYJLcL-QkAAYKiYku0_8-VH43eZRVXxRw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}game/",
+							"host": [
+								"{{url}}game"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Output",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{url}}game/",
+									"host": [
+										"{{url}}game"
+									],
+									"path": [
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 21 Jan 2023 19:12:27 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.1"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, PUT, HEAD, OPTIONS"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"output\": {\n        \"gameId\": 7,\n        \"gameName\": \"\",\n        \"gameActive\": \"1\",\n        \"gameEntryId\": 2,\n        \"gameEntryDate\": \"2023-01-22\",\n        \"gameModifiedId\": 0,\n        \"gameModifiedDate\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Game Board",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZXhwIjoxNjc0MzI5OTExLCJpYXQiOjE2NzQzMjgxMTEsInVzZXJSb2xlSWQiOjEsInVzZXJBY3RpdmUiOiIxIn0.Czqvl13iglcYJLcL-QkAAYKiYku0_8-VH43eZRVXxRw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"char\":\"k\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}game/4",
+							"host": [
+								"{{url}}game"
+							],
+							"path": [
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Output",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"char\":\"k\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}game/4",
+									"host": [
+										"{{url}}game"
+									],
+									"path": [
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 21 Jan 2023 19:12:19 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.1"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, PUT, HEAD, OPTIONS"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"Continue\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Game Board by ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZXhwIjoxNjc0MzI5OTExLCJpYXQiOjE2NzQzMjgxMTEsInVzZXJSb2xlSWQiOjEsInVzZXJBY3RpdmUiOiIxIn0.Czqvl13iglcYJLcL-QkAAYKiYku0_8-VH43eZRVXxRw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}game/4",
+							"host": [
+								"{{url}}game"
+							],
+							"path": [
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Output",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}game/4",
+									"host": [
+										"{{url}}game"
+									],
+									"path": [
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 21 Jan 2023 19:12:05 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.1"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, PUT, HEAD, OPTIONS"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"output\": {\n        \"gameId\": 4,\n        \"gameName\": \"\",\n        \"gameActive\": \"1\",\n        \"gameEntryId\": 2,\n        \"gameEntryDate\": \"2023-01-22\",\n        \"gameModifiedId\": 2,\n        \"gameModifiedDate\": \"2023-01-22\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Game Boards",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZXhwIjoxNjc0MzI5OTExLCJpYXQiOjE2NzQzMjgxMTEsInVzZXJSb2xlSWQiOjEsInVzZXJBY3RpdmUiOiIxIn0.Czqvl13iglcYJLcL-QkAAYKiYku0_8-VH43eZRVXxRw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}game/",
+							"host": [
+								"{{url}}game"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Output",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}game/",
+									"host": [
+										"{{url}}game"
+									],
+									"path": [
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 21 Jan 2023 19:11:08 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.1"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, PUT, HEAD, OPTIONS"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"result\": {\n        \"pagination\": {\n            \"next\": \"http://localhost:9000/api/game/?page=2\",\n            \"previous\": null\n        },\n        \"count\": 6,\n        \"output\": [\n            {\n                \"gameId\": 1,\n                \"gameName\": \"\",\n                \"gameActive\": \"1\",\n                \"gameEntryId\": 1,\n                \"gameEntryDate\": \"2023-01-21\",\n                \"gameModifiedId\": 1,\n                \"gameModifiedDate\": \"2023-01-22\"\n            },\n            {\n                \"gameId\": 2,\n                \"gameName\": \"\",\n                \"gameActive\": \"1\",\n                \"gameEntryId\": 1,\n                \"gameEntryDate\": \"2023-01-21\",\n                \"gameModifiedId\": 0,\n                \"gameModifiedDate\": null\n            },\n            {\n                \"gameId\": 3,\n                \"gameName\": \"\",\n                \"gameActive\": \"1\",\n                \"gameEntryId\": 1,\n                \"gameEntryDate\": \"2023-01-22\",\n                \"gameModifiedId\": 0,\n                \"gameModifiedDate\": null\n            },\n            {\n                \"gameId\": 4,\n                \"gameName\": \"\",\n                \"gameActive\": \"1\",\n                \"gameEntryId\": 2,\n                \"gameEntryDate\": \"2023-01-22\",\n                \"gameModifiedId\": 2,\n                \"gameModifiedDate\": \"2023-01-22\"\n            },\n            {\n                \"gameId\": 5,\n                \"gameName\": \"\",\n                \"gameActive\": \"1\",\n                \"gameEntryId\": 2,\n                \"gameEntryDate\": \"2023-01-22\",\n                \"gameModifiedId\": 0,\n                \"gameModifiedDate\": null\n            }\n        ]\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "localhost:9000/api/",
+			"type": "default"
+		}
+	]
+}
